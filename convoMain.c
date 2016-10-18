@@ -10,7 +10,7 @@
 #define ERR_MSG printf("Memory Error!\n")
 
 int main (void) {
-    angspd = 10;
+    frec = 10;
 
     int S_N = 100;
     int H_N = 20;
