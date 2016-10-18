@@ -16,14 +16,12 @@ int main (void) {
     int H_N = 20;
     int C_N = S_N + H_N - 1;
     double S_T = 0.01;
-    double *y;
-    double *x = sample(S_N, S_T, sigSen);
-    double *h = hannWindow(H_N);
+    double *y, *x, *h;
 
-    if (x) {
+    if (x = sample(S_N, S_T, sigSen)) {
         file_gen("sigOut.txt", S_N, x);
 
-        if (h) {
+        if (h = hannWindow(H_N)) {
             file_gen("hannOut.txt", H_N, h);
             
             if (y = conv(S_N, H_N, x, h, C_N)) {
