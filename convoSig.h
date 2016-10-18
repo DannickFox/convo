@@ -3,16 +3,11 @@
 #include <math.h>
 
 double amp = 1;
-double angspd = 1;
+double frec = 10;
 double phi = 0;
 
 double sigSen (double t) {
-    return amp * sin(t * angspd + phi);
-}
-
-double sigSqr (double t) {
-    double s = sigSen(t);
-    return amp * s > 0 ? 1 : s < 0 ? -1 : 0;
+    return amp * sin(t * frec * 2 * M_PI + phi);
 }
 
 double *sample (int N, double T, double (*fcn)(double)) {
